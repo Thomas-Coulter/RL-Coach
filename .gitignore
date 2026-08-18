@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- RL Coach project specific ---
+
+# Replay files and their parsed JSON output: large, and often contain other
+# players' names/IDs, so they shouldn't be committed. See tools/README.md for
+# how to fetch a replay to test with.
+data/replays/*
+!data/replays/.gitkeep
+
+# rrrocket.exe is a platform-specific compiled binary (Windows), fetched via
+# the setup step in tools/README.md rather than committed to the repo.
+tools/*.exe
